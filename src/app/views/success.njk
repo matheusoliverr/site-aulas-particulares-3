@@ -1,0 +1,23 @@
+{% extends "layouts.njk" %}
+
+{% block content %}
+<div class="success-page">
+    <div class="success-lottie"></div>
+    <h2>Parabéns!!!</h2>
+    <p>Seu cadastro foi efetuado com sucesso.</p>
+    <a href="/">Voltar para o início</a>
+</div>
+
+<script src="/lottie.min.js"></script>
+
+<script>
+    const element = document.querySelector(".success-lottie")
+    lottie.loadAnimation({
+        container: element,
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: '/9553-check-animation.json'
+    }).setSpeed(1.5)
+</script>
+{% endblock content %}

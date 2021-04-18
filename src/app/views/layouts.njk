@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon"
+        href="https://raw.githubusercontent.com/Rocketseat/bootcamp-launchbase-desafios-02/master/desafios/favicon.ico"
+        type="image/x-icon" />
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/messages.css">
+    <link rel="stylesheet" href="/styles/cards.css">
+    <link rel="stylesheet" href="/styles/table.css">
+    <link rel="stylesheet" href="/styles/filter.css">
+
+    {% block head %}
+    <title>Teste HTML</title>
+    {% endblock %}
+
+</head>
+
+<body>
+<header>
+
+    <div class="pages">
+        <a href="/teachers" class="teachers">Teachers</a>
+        <a href="/students" class="students">Students</a>
+    </div>
+
+</header>
+
+{% include "messages.njk" %}
+
+{% block content %}
+
+{% endblock %}
+
+<script src="/scripts.js"></script>
+    
+</body>
+
+</html>

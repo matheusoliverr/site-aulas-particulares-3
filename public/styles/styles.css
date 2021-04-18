@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+:root{
+    --color-blue: rgb(23, 23, 94);
+    --color-green: rgba(70, 207, 70, 0.829);
+}
+
+header{
+    background-color: var(--color-blue);
+    padding: 32px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.pages a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    padding: 8px 8px 2px;
+}
+
+.pages a.open{
+    border-bottom: 3px solid white
+}
+
+.pages a+a{
+    margin-left: 60px;
+}
+
+.pages a::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    top: -8px;
+    left: 32px;
+    position: absolute;
+    background-color: white;
+}
+
+.pages a:hover::after{
+    width: 50%;
+    transition: width 100ms ease-in-out;
+}
+
+/* CREATE */
+
+.card-create{
+    width: 1000px;
+    min-height: 800px;
+    margin: 64px auto;
+    background-color: rgba(220, 220, 220, 0.4);
+    border-radius: 5%;
+    animation: image 300ms forwards ease-in;
+    box-shadow: 2px 2px 5px 2px grey;
+    position: relative;
+}
+
+.card-create .card-content p{
+    margin: 48px auto;
+    padding: 16px;
+    width: 400px;
+    font-size: 20px;
+    text-align: center;
+    background-color: var(--color-blue);
+    border-radius: 10px;
+    color: white;
+}
+
+.info input{
+    font-size: 20px;
+    border: 2px solid var(--color-blue);
+    margin-top: 16px;
+}
+
+input[type="text"], input[type="date"], input[type="url"], input[type="email"], input[type="number"] {
+    font-size: 18px;
+    min-height: 30px;
+    min-width: 254px;
+}
+
+.info.create span{
+    margin-top: 12px;
+    margin-right: 16px;
+}
+
+input[type="radio"]{
+    margin: 12px 8px 12px 0;
+    cursor: pointer;
+}
+
+input::placeholder{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+select{
+    font-size: 20px;
+    border: 2px solid var(--color-blue);
+    margin-top: 16px;
+    min-width: 258px;
+}
+
+.info.create{
+    margin-left: 80px;
+}
+
+button{
+    font-size: 20px;
+    background-color: var(--color-blue);
+    padding: 12px 44px;
+    position: absolute;
+    right: 160px;
+    bottom: 50px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover, .edit-button:hover, .delete-form button:hover, .table tbody tr td a:hover{
+    background-color: rgba(0,0,0,0.6);
+    transition: 100ms;
+}
+
+/* SHOW */
+
+.edit-button{
+    font-size: 20px;
+    background-color: var(--color-blue);
+    padding: 12px 24px;
+    position: absolute;
+    right: 120px;
+    bottom: 24px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+.card-content.edit p{
+    width: 500px;
+}
+
+.delete-form button{
+    position: absolute;
+    left: 60px;
+    bottom: 24px;
+    background-color: rgb(255, 20, 20);
+}
