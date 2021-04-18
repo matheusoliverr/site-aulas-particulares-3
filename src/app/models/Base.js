@@ -46,8 +46,6 @@ const Base = {
 
             const results = await db.query(query)
 
-            console.log(results.rows[0])
-
             return results.rows[0]
 
         } catch (error) {
